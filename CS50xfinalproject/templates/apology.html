@@ -1,0 +1,13 @@
+
+<!-- This block is from CS50x problem set 9 finance https://cs50.harvard.edu/x/psets/9/finance/    -->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <!-- https://memegen.link/ -->
+    <img alt="{{ top }}" class="border img-fluid" src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?background=https://i.imgur.com/jNvzqSq.jpeg&width=400" title="{{ top }}">
+{% endblock %}
