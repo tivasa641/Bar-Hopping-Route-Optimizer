@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="row justify-content-center">
+        <div class="card border-primary text-start mb-3">
+            <div class="card-body">
+                <h2 class="text-center mb-4 text-info">Plan Your Bar Hopping Route</h2>
+                
+                <form action="/" method="post">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="budget" class="form-label">Total budget</label>
+                            <input type="number" class="form-control" id="budget" name="budget" placeholder="NTD">
+                        </div>
+                        <div class="col">
+                            <label for="bars_count" class="form-label">How many bars do you want to visit?(3~5)</label>
+                            <input type="number" class="form-control" min="3" max="5" id="bars_count" name="bars_number" placeholder="number of bars">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="starting_time" class="form-label">Starting time</label>
+                            <input type="time" class="form-control" id="start_time" name="start_time">
+                        </div>
+                        <div class="col">
+                            <label for="end_time" class="form-label">Last bar arrival time</label>
+                            <input type="time" class="form-control" id="end_time" name="end_time">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="day_of_week" class="form-label">day of week</label>
+                        <select class="form-select" id="day_of_week" name="day_of_week">
+                            <option value="0">day of week</option>
+                            <option value="1">Mon.</option>
+                            <option value="2">Tue.</option>
+                            <option value="3">Wed.</option>
+                            <option value="4">Thu.</option>
+                            <option value="5">Fri.</option>
+                            <option value="6">Sat.</option>
+                            <option value="7">Sun.</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="start_bar" class="form-label">Starting bar</label>
+                        <input type="text" class="form-control" id="start_bar" name="start_bar" placeholder="name of bar">
+                    </div>
+                    <div class="mb-4">
+                        <label for="last_bar" class="form-label">Last bar</label>
+                        <input type="text" class="form-control" id="end_bar" name="last_bar" placeholder="name of bar">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label d-block">Optimize route by</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="optimize_type" id="distance" value="distance" checked>
+                            <label class="form-check-label" for="distance">Distance</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="optimize_type" id="time" value="time_required">
+                            <label class="form-check-label" for="time">Time</label>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary" type="submit">Plan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
