@@ -169,4 +169,8 @@ def verify(budget, bars_number, start_time, end_time, day_of_week, start_bar, la
     
     # numder of ber isn't [3, 4, 5]
     if int(bars_number) not in [3, 4, 5]:
-        return apology("NUMBER OF BARS MUST BE 3, 4 OR 5") 
+        return apology("NUMBER OF BARS MUST BE 3, 4 OR 5")
+
+    # optimize type somehow isn't distance or time
+    if optimize_type not in ["distance", "time_required"]:
+        return apology("WRONG OPTIMIZE TYPE")
