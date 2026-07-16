@@ -119,7 +119,7 @@ def optimize(combinations_of_nodes, distances_db, bars_number):
     return final_result
 
 
-def verify(budget, bars_number, start_time, end_time, day_of_week, start_bar, last_bar, db):
+def verify(budget, bars_number, start_time, end_time, day_of_week, start_bar, last_bar, optimize_type, db):
     """Verify user's input"""
     # NOTE: Calling the database inside a function is a bad design, but this piece of code is really too long. So I traded off performance for better readability.
 
